@@ -1,0 +1,28 @@
+syntax = "proto2";
+package proto.srsi;
+
+option java_package = "pro.belbix.tim.protobuf.srsi";
+option java_multiple_files = true;
+
+message Srsi {
+  repeated SrsiNode nodesLongOpen = 1;
+  repeated SrsiNode nodesLongClose = 2;
+  repeated SrsiNode nodesShortOpen = 3;
+  repeated SrsiNode nodesShortClose = 4;
+}
+
+message SrsiNode {
+  required int32 index = 1;
+
+  optional DoubleValue srsiDiffMin = 2;
+  optional DoubleValue srsiDiffMax = 3;
+  optional DoubleValue srsiMin = 4;
+  optional DoubleValue srsiMax = 5;
+  optional DoubleValue priceDiffMin = 6;
+  optional DoubleValue priceDiffMax = 7;
+}
+
+message DoubleValue {
+  required double value = 1;
+  optional int32 count = 2;
+}

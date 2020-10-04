@@ -1,0 +1,49 @@
+syntax = "proto2";
+package proto.neuron;
+
+option java_package = "pro.belbix.tim.protobuf.neuron";
+option java_multiple_files = true;
+
+message NeuronModel {
+  optional int64 id = 1;
+  optional int32 indexOfCandle = 2;
+  optional bool positive = 3;
+  optional double threshold = 4;
+  optional double weight = 5;
+  repeated int64 links = 6;
+  optional int64 epochCount = 7;
+}
+
+message NeuronLayerModel {
+  optional int32 type = 1;
+  repeated NeuronModel neurons = 2;
+  optional double mutateDoubleMax = 3;
+  optional double mutateDoubleBase = 4;
+  optional double baseChanceDouble = 5;
+  optional double baseChanceLink = 6;
+  optional double baseChanceNeuron = 7;
+  optional double baseChanceHidden = 8;
+  optional double countBase = 9;
+  optional double countMin = 10;
+}
+
+message NeuroLinkModel {
+  optional NeuroLinkType type = 1;
+  optional NeuronLayerModel input = 2;
+  map<int32, NeuronLayerModel> hidden = 3;
+  optional NeuronModel result = 4;
+}
+
+enum NeuroLinkType {
+  LONG_OPEN = 1;
+  LONG_CLOSE = 2;
+  SHORT_OPEN = 3;
+  SHORT_CLOSE = 4;
+}
+
+message Nsrsi {
+  required NeuroLinkModel openLong = 1;
+  required NeuroLinkModel closeLong = 2;
+  required NeuroLinkModel openShort = 3;
+  required NeuroLinkModel closeShort = 4;
+}

@@ -1,0 +1,89 @@
+srsi2:
+  nodes-long-open:
+    - currentIndex: 0
+      comparedIndex: 1
+      currentSrsiDiff: -98
+      comparedSrsiDiff: 7
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
+    - currentIndex: 0
+      comparedIndex: 2
+      currentSrsiDiff: 20
+      comparedSrsiDiff: -30
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
+    - currentIndex: 1
+      comparedIndex: 2
+      currentSrsiDiff: -89
+      comparedSrsiDiff: 138
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
+  nodes-long-close:
+    - currentIndex: 0
+      comparedIndex: 1
+      currentSrsiDiff: -78
+      comparedSrsiDiff: -66
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
+    - currentIndex: 0
+      comparedIndex: 2
+      currentSrsiDiff: -153
+      comparedSrsiDiff: 17
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
+    - currentIndex: 1
+      comparedIndex: 2
+      currentSrsiDiff: -115
+      comparedSrsiDiff: -139
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
+  nodes-short-open:
+    - currentIndex: 0
+      comparedIndex: 1
+      currentSrsiDiff: -11
+      comparedSrsiDiff: -15
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
+    - currentIndex: 0
+      comparedIndex: 2
+      currentSrsiDiff: -27
+      comparedSrsiDiff: -31
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
+    - currentIndex: 1
+      comparedIndex: 2
+      currentSrsiDiff: 23
+      comparedSrsiDiff: -42
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
+  nodes-short-close:
+    - currentIndex: 0
+      comparedIndex: 1
+      currentSrsiDiff: 10
+      comparedSrsiDiff: -31
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
+    - currentIndex: 0
+      comparedIndex: 2
+      currentSrsiDiff: -37
+      comparedSrsiDiff: -72
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
+    - currentIndex: 1
+      comparedIndex: 2
+      currentSrsiDiff: -25
+      comparedSrsiDiff: 22
+      maxPriceDiff: 20
+      currentSrsiMin: 100
+      currentSrsiMax: 0
