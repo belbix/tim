@@ -20,7 +20,21 @@ import pro.belbix.tim.exceptions.TIMRetryException;
 import pro.belbix.tim.exceptions.TIMRuntimeException;
 import pro.belbix.tim.exchanges.Exchange;
 import pro.belbix.tim.exchanges.ExchangesUtils;
-import pro.belbix.tim.exchanges.bitmex.dto.*;
+import pro.belbix.tim.exchanges.bitmex.dto.BitmexOrderResponse;
+import pro.belbix.tim.exchanges.bitmex.dto.BucketedResponse;
+import pro.belbix.tim.exchanges.bitmex.dto.InstrumentResponse;
+import pro.belbix.tim.exchanges.bitmex.dto.LeverageRequest;
+import pro.belbix.tim.exchanges.bitmex.dto.LeverageResponse;
+import pro.belbix.tim.exchanges.bitmex.dto.OrderBookResponse;
+import pro.belbix.tim.exchanges.bitmex.dto.OrderDeleteAllRequest;
+import pro.belbix.tim.exchanges.bitmex.dto.OrderDeleteRequest;
+import pro.belbix.tim.exchanges.bitmex.dto.OrderRequest;
+import pro.belbix.tim.exchanges.bitmex.dto.OrderUpdateRequest;
+import pro.belbix.tim.exchanges.bitmex.dto.PositionResponse;
+import pro.belbix.tim.exchanges.bitmex.dto.TradeResponse;
+import pro.belbix.tim.exchanges.bitmex.dto.WalletHistoryResponse;
+import pro.belbix.tim.exchanges.bitmex.dto.WalletResponse;
+import pro.belbix.tim.exchanges.bitmex.dto.WsTradeResponse;
 import pro.belbix.tim.exchanges.models.Balance;
 import pro.belbix.tim.exchanges.models.Position;
 import pro.belbix.tim.properties.BitmexProperties;
@@ -279,10 +293,10 @@ public class BitmexREST implements Exchange {
     }
 
     @Override
-    @Retryable(
-            value = {TIMRetryException.class},
-            maxAttempts = MAX_ATTEMPTS,
-            backoff = @Backoff(delay = ATTEMPT_DELAY))
+//    @Retryable(
+//            value = {TIMRetryException.class},
+//            maxAttempts = MAX_ATTEMPTS,
+//            backoff = @Backoff(delay = ATTEMPT_DELAY))
     public List<Tick> historyTicks(String symbol, int limit, LocalDateTime startTime, LocalDateTime endTime, int start) throws TIMRetryException {
         String requestUrl = prop.getUrlOpenData() + "trade";
         log.trace("requestUrl:" + requestUrl);
